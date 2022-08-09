@@ -556,14 +556,14 @@
     }
  /* Post
     ============================= */
-  .main-article .container .post {
+  .post {
     display: flex;
   }
-  .main-article .container .post .post-content {
+  .post-content {
     width: 100%;
   }
 
-  .main-article .container .post .post-aside {
+  .post-aside {
     order: -1;
     min-width: 20%;
   }
