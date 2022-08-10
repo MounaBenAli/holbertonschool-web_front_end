@@ -1,0 +1,10 @@
+/* creates classes with different width */
+$total-columns: 4;
+$width: 100%;
+
+@for $i from 1 through $total-columns {
+            .col-#{$i} {
+                width: $width / $i;
+            }
+        }
+        
