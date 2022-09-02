@@ -1,5 +1,5 @@
 #!/usr/bin/node
-//
+//nested functions
 
 var globalVariable = 'Welcome';
 
