@@ -4,10 +4,10 @@
     <head>
 
         <meta charset="utf-8" />
-        <title>Task 0</title>
+        <title>Task 2</title>
         <script src="https://code.jquery.com/jquery-3.6.1.slim.min.js" integrity="sha256-w8CvhFs7iHNVUtnSP0YKEg00p9Ih13rlL9zGqvLdePA=" crossorigin="anonymous"></script>
         <style>
-            table, td, th{
+            thead {
                 font-family: arial, sans-serif;
                 font-weight: 900;
              } 
@@ -18,7 +18,7 @@
         <script type="application/javascript">
             function createFamilyTree() {
                 var table = $(
-                    "<table><tr><th>Firstname</th><th>Lastname</th></tr><tr><td>Guillaume</td><td>Salva</td></tr><tr><td>Paulette</td><td>Salva</td></tr><tr><td>Antoine</td><td>Salva</td></tr></table>");
+                    "<table><thead><tr><th>Firstname</th><th>Lastname</th></tr></thead><tbody><tr><td>Guillaume</td><td>Salva</td></tr><tr><td>Paulette</td><td>Salva</td></tr></tbody><tfoot><tr><td>Antoine</td><td>Salva</td></tr></tfoot></table>");
                 $("body").append(table);   
             };
             createFamilyTree();
