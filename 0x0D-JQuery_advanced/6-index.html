@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+    <head>
+
+        <meta charset="utf-8" />
+        <title>Task 6</title>
+        <script src="https://code.jquery.com/jquery-3.6.1.slim.min.js" integrity="sha256-w8CvhFs7iHNVUtnSP0YKEg00p9Ih13rlL9zGqvLdePA=" crossorigin="anonymous"></script>
+        <style>
+            thead {
+                font-family: arial, sans-serif;
+                font-weight: 900;
+             }
+        </style>
+    </head>
+
+    <body>
+        <script type="application/javascript">
+            function createFamilyTree() {
+                $('body').append('<table></table>');
+                $('table').append($('<thead><tr> <th>Firstname</th> <th>Lastname</th> </tr></thead>'));
+                $('table').append($('<tbody></tbody>'));
+            }; 
+          
+            function addNewMember(firstName, lastName, position) {
+                var table_row = $("<tr></tr>");
+                var cell_1 = $("<td>" + firstName + "</td>");
+                var cell_2 = $("<td>" + lastName + "</td>");
+                var cell_3 = $("<td>(x)</td>").css({"background-color": "orange"}).click(function(){$(table_row).remove()});
+
+                if (position == 'before') {
+                    table_row.prepend(table_row);
+                    table_row.append(cell_1);
+                    table_row.append(cell_2);
+                    table_row.append(cell_3);
+                    $("table tbody").append(table_row);
+                } else {
+                    table_row.append(cell_1);
+                    table_row.append(cell_2);
+                    table_row.append(cell_3);
+                    $("table tbody").append(table_row);
+                };
+                
+            };
+            
+            function createForm() {
+                var input = $('<input type="text"> <input type="text">');
+                var selection = $('<select> <option value="before">Before </option>  <option  value="after">After</option> </select>');
+                var submit = $('<input [type="submit", value="Submit"]>')
+                
+
+
+                $("table").before(input);
+                $("table").before(input);
+                $("table").before(selection);
+                $("table").before(submit);
+
+            };
+            
+            createFamilyTree();
+            createForm();
+        </script>
+    </body>
+</html>
