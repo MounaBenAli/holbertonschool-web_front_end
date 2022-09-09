@@ -1,31 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=inp, initial-scale=1.0">
-    <title>Create basic cookie</title>
-</head>
-<body>  
-    <script>
-        function setCookies() {
-            let firstname = document.getElementById("firstname").value;
-            let email = document.getElementById("email").value;
-            document.cookie = `> firstname= ${firstname.value}`;
-            document.cookie = `> firstname= ${email.value}`;
-        };
-
-        function showCookies() {
-            const para = document.createElement('p');
-            para.innerHTML = document.cookie
-            document.body.appendChild(para);
-        };
-    </script>
-     <h1>Login to the website</h1>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>0-index.html</title>
+  </head>
+  <body>
+    <h1>Login to the website</h1>
      <input type="text" id="firstname" placeholder="Firstname">
      <input type="text" id="email" placeholder="Email">
      <button type="button" onclick="setCookies();">Log me in</button>
      <h1>Cookies</h1>
      <button type="button" onclick="showCookies();">Show the cookies</button>
-</body>
+    <script type="application/javascript">
+      function setCookies() {
+        const firstName = document.querySelector("#firstname").value;
+        const email = document.querySelector("#email").value;
+        document.cookie = `firstname=${firstName}`;
+        document.cookie = `email=${email}`;
+      }
+
+      function showCookies() {
+        const cookies = document.cookie;
+        const para = document.createElement("p");
+        para.innerHTML = `Cookies: ${cookies}`;
+        document.body.appendChild(para);
+      }
+    </script>
+  </body>
 </html>
